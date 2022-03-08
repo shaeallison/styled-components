@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Text} from './'
 
 const StyledFormItem = styled.div`
   margin-bottom: 2rem;
@@ -17,26 +18,17 @@ const StyledInput = styled.input`
   padding: 1rem 1.2rem;
 `
 
-const StyledText = styled.span`
-  margin-top: 0.2rem;
-  display: block;
-`
-
-const StyledError = styled(StyledText)`
-  color: red;
-`
-
 const FormItems = (props) =>  {
-  const {tag, label, type, required, id, help, error} = props
+  const {label, type, required, id, help, error} = props
 
   return (
     <StyledFormItem>
       <StyledLabel for={id}>{label}</StyledLabel>
       <StyledInput id={id} type={type} required={required}/>
       {help !== null &&
-        <StyledText type='help'>{help}</StyledText>
+        <Text as='span' style='help'>{help}</Text>
       }
-      <StyledError>{error}</StyledError>
+      <Text as='span' style='error'>{error}</Text>
     </StyledFormItem>
   )
 }

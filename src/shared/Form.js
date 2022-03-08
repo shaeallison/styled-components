@@ -1,5 +1,4 @@
-import {Grid, Column, FormItems} from './'
-
+import {Grid, Column, FormItems, Text} from './'
 
 const gutters = [
   {breakpoint: null, size: '0'},
@@ -10,7 +9,7 @@ const Form = () =>  {
   return (
     <form>
       <fieldset>
-        <legend>Account Information</legend>
+        <Text style='legend' as='legend'>Account Information</Text>
 
         <Grid gutter={gutters}>
           <Column

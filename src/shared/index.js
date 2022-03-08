@@ -4,6 +4,7 @@ import Grid from './Grid'
 import Card from './Card'
 import Form from './Form'
 import FormItems from './FormItems'
+import Text from './Text'
 
 export {
   Column,
@@ -11,5 +12,6 @@ export {
   Grid,
   Card,
   Form,
-  FormItems
+  FormItems,
+  Text
 }
